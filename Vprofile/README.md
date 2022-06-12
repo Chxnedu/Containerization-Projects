@@ -15,3 +15,4 @@ In this project, I containerized a simple local webapp consisting of the followi
 * I wrote a docker compose file that I used to start up all the containers and started it with
 > docker compose -f docker-compose.yaml up
 * Then I verified that everything was set up correctly and working as intended
+I hosted the images on AWS ECR service
