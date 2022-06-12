@@ -2,7 +2,7 @@
 version: "3"
 services:
 
-  vprodb:
+  db01:
     image: vprofiledb:1.0
     ports:
       - 3306:3306
@@ -11,18 +11,18 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=vprodbpass
 
-  vprocache01:
+  mc01:
     image: memcached
     ports:
       - 11211:11211
 
-  vpromq01:
+  rmq01:
     image: rabbitmq
     ports:
-      - 15691:15691
+      - 5672:5672
     environment:
-      - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_USER=test
+      - RABBITMQ_DEFAULT_PASS=test
 
   vproapp:
     image: vprofileapp
@@ -34,7 +34,7 @@ services:
   vproweb:
     image: vprofileweb:1.0
     ports:
-      - 86:80
+      - 80:80
 volumes:
   vprodbdata: {}
   vproappdata: {}
