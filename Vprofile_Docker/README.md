@@ -1,4 +1,4 @@
-# Vprofile Project
+# Docker Project
 
 In this project, I containerized a simple local webapp consisting of the following services;
 - a mysql database
